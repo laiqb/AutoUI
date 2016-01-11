@@ -26,7 +26,7 @@ public class test {
 	private static final Log log = LogFactory.getLog(test.class);
 	private String datas = "datas.xml";
 	private TestDatas tdata = null;
-	
+
 	@BeforeTest
 	public void setUp(){
 		//确认用户在数据库中存在，且该用户是未登陆的
@@ -34,7 +34,7 @@ public class test {
 		String testDatapath = this.getClass().getResource("").getPath().toString();
 		tdata = (TestDatas)XmlUtil.xmlTobean(testDatapath + datas, "com.bfm.http.bean.TestDatas");
 		System.out.println(tdata);
-
+		System.out.println("This is Org");
 	}
 	
 	@Test
