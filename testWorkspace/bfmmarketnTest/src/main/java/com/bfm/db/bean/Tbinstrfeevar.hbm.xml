@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstrfeevar" table="TBINSTRFEEVAR">
+        <composite-id name="id" class="com.bfm.db.bean.TbinstrfeevarId">
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="feeNo" type="big_decimal">
+                <column name="FEE_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="feeCcy" type="string">
+            <column name="FEE_CCY" length="3" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="feeName" type="string">
+            <column name="FEE_NAME" length="30" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="position" type="string">
+            <column name="POSITION" length="1" not-null="true">
+                <comment>1-?? 2-??</comment>
+            </column>
+        </property>
+        <property name="feeType" type="string">
+            <column name="FEE_TYPE" length="2" not-null="true">
+                <comment>?????????????? 1-??</comment>
+            </column>
+        </property>
+        <property name="amtOrRate" type="string">
+            <column name="AMT_OR_RATE" length="1" not-null="true">
+                <comment>0??????????????????? 1?????????????????</comment>
+            </column>
+        </property>
+        <property name="fixAmt" type="big_decimal">
+            <column name="FIX_AMT" precision="18" not-null="true">
+                <comment>?????????????????????</comment>
+            </column>
+        </property>
+        <property name="payFeeRate" type="big_decimal">
+            <column name="PAY_FEE_RATE" precision="10" scale="8" not-null="true">
+                <comment>??????????????????????</comment>
+            </column>
+        </property>
+        <property name="tryAmt" type="big_decimal">
+            <column name="TRY_AMT" precision="18" not-null="true">
+                <comment>???????????????*???</comment>
+            </column>
+        </property>
+        <property name="payDate" type="big_decimal">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true">
+                <comment>0????????????????????</comment>
+            </column>
+        </property>
+        <property name="isYearRate" type="string">
+            <column name="IS_YEAR_RATE" length="1" not-null="true">
+                <comment>0????????????? 1-???????????</comment>
+            </column>
+        </property>
+        <property name="feeMode" type="string">
+            <column name="FEE_MODE" length="1" not-null="true">
+                <comment>0??????????????? 1-??? 2-?? 3-?????????????? 4-???</comment>
+            </column>
+        </property>
+        <property name="payFreq" type="string">
+            <column name="PAY_FREQ" length="3" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="holiday" type="string">
+            <column name="HOLIDAY" length="30" not-null="true">
+                <comment>??????????? ??GBPJPY,??10??3???????????</comment>
+            </column>
+        </property>
+        <property name="dateAdjustMethod" type="string">
+            <column name="DATE_ADJUST_METHOD" length="1" not-null="true">
+                <comment>0???? 1?????? 2???????????????????????????? 3?????? 4?????????</comment>
+            </column>
+        </property>
+        <property name="balType" type="string">
+            <column name="BAL_TYPE" length="1" not-null="true">
+                <comment>0-??????????? 1??????????</comment>
+            </column>
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true" />
+        </property>
+        <property name="lastFeeEndDate" type="big_decimal">
+            <column name="LAST_FEE_END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

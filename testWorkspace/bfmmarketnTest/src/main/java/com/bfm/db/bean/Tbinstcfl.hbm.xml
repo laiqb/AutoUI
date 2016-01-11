@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstcfl" table="TBINSTCFL">
+        <comment>??????? 1?????????? 2??????????? 3???????/??????? 4????????/????????? 5???????????? ???????? 1?????????????????????????????? 2??????
+        3?????????????????????????????????????? 4???????????????????????????????? ??????????????????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinstcflId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cflNo" type="big_decimal">
+                <column name="CFL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="startDate" type="big_decimal">
+            <column name="START_DATE" precision="22" scale="0" not-null="true">
+                <comment>???????0?????????</comment>
+            </column>
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true">
+                <comment>???????0?????????</comment>
+            </column>
+        </property>
+        <property name="period" type="big_decimal">
+            <column name="PERIOD" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="compdMethod" type="string">
+            <column name="COMPD_METHOD" length="1" not-null="true">
+                <comment>K_FLFS 0-?? 1???</comment>
+            </column>
+        </property>
+        <property name="payDate" type="big_decimal">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true">
+                <comment>????????????????? ????????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="payDateUnadj" type="big_decimal">
+            <column name="PAY_DATE_UNADJ" precision="22" scale="0" not-null="true">
+                <comment>?????????????????????????</comment>
+            </column>
+        </property>
+        <property name="dateAdjustMethod" type="string">
+            <column name="DATE_ADJUST_METHOD" length="1" not-null="true">
+                <comment>????????????????? 0??????? 1?????? 2?????? 3???????????????? 4????????????????</comment>
+            </column>
+        </property>
+        <property name="payAmt" type="big_decimal">
+            <column name="PAY_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="payCcy" type="string">
+            <column name="PAY_CCY" length="3" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>0-???1-??, 2-??, 3-????, 4-???, 5-???, 6-??? ???????????????? ??????? ???????????????? ???????????????? ??????</comment>
+            </column>
+        </property>
+        <property name="dealStatus" type="string">
+            <column name="DEAL_STATUS" length="1" not-null="true">
+                <comment>1:???? 2-?????? 3-???? 4-???? 6:?? 7:???????</comment>
+            </column>
+        </property>
+        <property name="cflType" type="string">
+            <column name="CFL_TYPE" length="1" not-null="true">
+                <comment>1. ?? 2. ?? 3. ?? 4. ???? 5.??+?????????????????????????</comment>
+            </column>
+        </property>
+        <property name="actualAmt" type="big_decimal">
+            <column name="ACTUAL_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="actualDate" type="big_decimal">
+            <column name="ACTUAL_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="position" type="string">
+            <column name="POSITION" length="1" not-null="true">
+                <comment>?? 1-?? 2-??</comment>
+            </column>
+        </property>
+        <property name="resetCount" type="big_decimal">
+            <column name="RESET_COUNT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nominalType" type="string">
+            <column name="NOMINAL_TYPE" length="1" not-null="true">
+                <comment>0?????????? 1???????????Act/360??????Act???????????? 2?????????</comment>
+            </column>
+        </property>
+        <property name="nominalAmt" type="big_decimal">
+            <column name="NOMINAL_AMT" precision="18" not-null="true">
+                <comment>????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="nominalCcy" type="string">
+            <column name="NOMINAL_CCY" length="3" not-null="true">
+                <comment>?????????????????????</comment>
+            </column>
+        </property>
+        <property name="nominalSum" type="big_decimal">
+            <column name="NOMINAL_SUM" precision="18" not-null="true" />
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true" />
+        </property>
+        <property name="payRate" type="big_decimal">
+            <column name="PAY_RATE" precision="10" scale="8" not-null="true">
+                <comment>?????????+??/100</comment>
+            </column>
+        </property>
+        <property name="payRateCalc" type="big_decimal">
+            <column name="PAY_RATE_CALC" precision="10" scale="8" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="paySpread" type="big_decimal">
+            <column name="PAY_SPREAD" precision="18" not-null="true">
+                <comment>?????????+??/100?????%????20???????20</comment>
+            </column>
+        </property>
+        <property name="holidayTypes" type="string">
+            <column name="HOLIDAY_TYPES" not-null="true">
+                <comment>??CNY,USD,JPN?????</comment>
+            </column>
+        </property>
+        <property name="deductionRate" type="big_decimal">
+            <column name="DEDUCTION_RATE" precision="10" scale="8" not-null="true">
+                <comment>???0????????????????????????????? ????*??????/100</comment>
+            </column>
+        </property>
+        <property name="deductionFee" type="big_decimal">
+            <column name="DEDUCTION_FEE" precision="18" not-null="true">
+                <comment>???0??????????????</comment>
+            </column>
+        </property>
+        <property name="accSerialNo" type="string">
+            <column name="ACC_SERIAL_NO" length="32" not-null="true">
+                <comment>??????????????????</comment>
+            </column>
+        </property>
+        <property name="accSerialNo2" type="string">
+            <column name="ACC_SERIAL_NO2" length="32" not-null="true">
+                <comment>???????????????????</comment>
+            </column>
+        </property>
+        <property name="nettingNo" type="string">
+            <column name="NETTING_NO" length="32" not-null="true">
+                <comment>??????????????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="100" not-null="true" />
+        </property>
+        <property name="ruleNo" type="big_decimal">
+            <column name="RULE_NO" precision="22" scale="0" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="30" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="feeType" type="string">
+            <column name="FEE_TYPE" length="2" not-null="true">
+                <comment>????????????????????? 1-??</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="selfSerialNo" type="string">
+            <column name="SELF_SERIAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="rivalSerialNo" type="string">
+            <column name="RIVAL_SERIAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="payMethod" type="string">
+            <column name="PAY_METHOD" length="1" not-null="true">
+                <comment>1??????? ??? 2???</comment>
+            </column>
+        </property>
+        <property name="firstMaturity" type="string">
+            <column name="FIRST_MATURITY" length="1" not-null="true">
+                <comment>5-?? 6-?? ????????????????????5</comment>
+            </column>
+        </property>
+        <property name="cashSettleStatus" type="string">
+            <column name="CASH_SETTLE_STATUS" length="1" not-null="true">
+                <comment>0??-???? 1-???? 2-???? 3-DVP(??????) 4-????????? ??????????cash_settle_status?0???????????????????1?????????????1?</comment>
+            </column>
+        </property>
+        <property name="selfPathType" type="string">
+            <column name="SELF_PATH_TYPE" length="1" not-null="true">
+                <comment>0-?????? 1-???? 2-????</comment>
+            </column>
+        </property>
+        <property name="rivalPathType" type="string">
+            <column name="RIVAL_PATH_TYPE" length="1" not-null="true">
+                <comment>0-?????? 1-???? 2-????</comment>
+            </column>
+        </property>
+        <property name="selfNo" type="string">
+            <column name="SELF_NO" length="32" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="postscript" type="string">
+            <column name="POSTSCRIPT" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

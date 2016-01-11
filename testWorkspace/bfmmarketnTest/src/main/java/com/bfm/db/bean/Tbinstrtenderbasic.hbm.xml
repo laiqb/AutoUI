@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstrtenderbasic" table="TBINSTRTENDERBASIC">
+        <comment>Adjust by fj from 20091218 for bns version</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinstrtenderbasicId">
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="big_decimal">
+                <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true">
+                <comment>?????? ?????????????????????????</comment>
+            </column>
+        </property>
+        <property name="bidLower" type="big_decimal">
+            <column name="BID_LOWER" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="bidUpper" type="big_decimal">
+            <column name="BID_UPPER" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="bidAmount" type="big_decimal">
+            <column name="BID_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="surBidAmount" type="big_decimal">
+            <column name="SUR_BID_AMOUNT" precision="16" not-null="true">
+                <comment>Add by fj from 20091225 for bns version ???0</comment>
+            </column>
+        </property>
+        <property name="bidStatus" type="string">
+            <column name="BID_STATUS" length="1" not-null="true">
+                <comment>?????????????????0??? 0???? 1???? 2???</comment>
+            </column>
+        </property>
+        <property name="bidType" type="string">
+            <column name="BID_TYPE" length="1" not-null="true">
+                <comment>1????2?????????</comment>
+            </column>
+        </property>
+        <property name="tenderInfoId" type="string">
+            <column name="TENDER_INFO_ID" length="32" not-null="true" />
+        </property>
+        <property name="hgDays" type="big_decimal">
+            <column name="HG_DAYS" precision="22" scale="0" not-null="true">
+                <comment>????????,???????????????.</comment>
+            </column>
+        </property>
+        <property name="bidDate" type="big_decimal">
+            <column name="BID_DATE" precision="22" scale="0" not-null="true">
+                <comment>????????,???????????????.</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

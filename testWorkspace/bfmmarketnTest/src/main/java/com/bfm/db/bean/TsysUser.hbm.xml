@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 9:33:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysUser" table="TSYS_USER">
+        <comment>?????</comment>
+        <id name="userId" type="string">
+            <column name="USER_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="16" />
+        </property>
+        <property name="depCode" type="string">
+            <column name="DEP_CODE" length="16" />
+        </property>
+        <property name="userName" type="string">
+            <column name="USER_NAME" length="100" not-null="true" />
+        </property>
+        <property name="userPwd" type="string">
+            <column name="USER_PWD" length="32" not-null="true" />
+        </property>
+        <property name="userType" type="string">
+            <column name="USER_TYPE" length="8" not-null="true">
+                <comment>?????[SYS_BIZ_USER_CATE] 0-?? 1-??</comment>
+            </column>
+        </property>
+        <property name="userStatus" type="string">
+            <column name="USER_STATUS" length="8" not-null="true">
+                <comment>????????? ?????[SYS_BIZ_USER_STATUS] 0-?? 1-?? 2-??</comment>
+            </column>
+        </property>
+        <property name="lockStatus" type="string">
+            <column name="LOCK_STATUS" length="8" not-null="true">
+                <comment>???????????? ?????[SYS_BIZ_LOCK_STATUS] 0-?? 1-?? 2-????? 3-??</comment>
+            </column>
+        </property>
+        <property name="createDate" type="big_decimal">
+            <column name="CREATE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="modifyDate" type="big_decimal">
+            <column name="MODIFY_DATE" precision="22" scale="0" />
+        </property>
+        <property name="passModifyDate" type="big_decimal">
+            <column name="PASS_MODIFY_DATE" precision="22" scale="0" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" />
+        </property>
+        <property name="extField1" type="string">
+            <column name="EXT_FIELD_1" length="256" />
+        </property>
+        <property name="extField2" type="string">
+            <column name="EXT_FIELD_2" length="256" />
+        </property>
+        <property name="extField3" type="string">
+            <column name="EXT_FIELD_3" length="256" />
+        </property>
+        <property name="extField4" type="string">
+            <column name="EXT_FIELD_4" length="256" />
+        </property>
+        <property name="extField5" type="string">
+            <column name="EXT_FIELD_5" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

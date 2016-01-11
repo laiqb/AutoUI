@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstrdeal" table="TBINSTRDEAL">
+        <comment>from 20090627 1???????????????????????????????????? 2?????????????????????????????????? ??????????????????????????</comment>
+        <id name="dealSerialNo" type="string">
+            <column name="DEAL_SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="dailyInstructionNo" type="string">
+            <column name="DAILY_INSTRUCTION_NO" length="32" not-null="true" />
+        </property>
+        <property name="indexDailyModify" type="big_decimal">
+            <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="dealAmount" type="big_decimal">
+            <column name="DEAL_AMOUNT" precision="16" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="dealBalance" type="big_decimal">
+            <column name="DEAL_BALANCE" precision="16" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="entrustDealSerialId" type="string">
+            <column name="ENTRUST_DEAL_SERIAL_ID" length="32" not-null="true">
+                <comment>from 20091006 for znx ???????? 1??????????????????? 2??????????????????????????????????????????? 3???????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>from 20091006 for znx ???????? 1???????K_SFKZT 2??????1?????2?????3??????4?????? 5??????6?????
+                3???????????????1??2????????????????????????3?4?or?5?6????????????????????????1?2?or?3?4?</comment>
+            </column>
+        </property>
+        <property name="deductFee" type="big_decimal">
+            <column name="DEDUCT_FEE" precision="16" not-null="true">
+                <comment>Add by fj from 20091022 for znx ??????????</comment>
+            </column>
+        </property>
+        <property name="deductBail" type="big_decimal">
+            <column name="DEDUCT_BAIL" precision="16" not-null="true">
+                <comment>Add by fj from 20091022 for znx ??????????</comment>
+            </column>
+        </property>
+        <property name="deductFeeFlag" type="string">
+            <column name="DEDUCT_FEE_FLAG" length="1" not-null="true">
+                <comment>Add by fj from 20091110 for znx 1??? 2????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

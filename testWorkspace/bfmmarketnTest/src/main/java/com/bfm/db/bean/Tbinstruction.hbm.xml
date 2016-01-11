@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstruction" table="TBINSTRUCTION">
+        <composite-id name="id" class="com.bfm.db.bean.TbinstructionId">
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="int">
+                <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="transDate" type="int">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="lockFlag" type="string">
+            <column name="LOCK_FLAG" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="indexLastModify" type="int">
+            <column name="INDEX_LAST_MODIFY" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true">
+            </column>
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true">
+            </column>
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true" />
+        </property>
+        <property name="instructionType" type="string">
+            <column name="INSTRUCTION_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="beginDate" type="int">
+            <column name="BEGIN_DATE" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="endDate" type="int">
+            <column name="END_DATE" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="beginTime" type="int">
+            <column name="BEGIN_TIME" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="endTime" type="int">
+            <column name="END_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="directDate" type="int">
+            <column name="DIRECT_DATE" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="directTime" type="int">
+            <column name="DIRECT_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="directOperator" type="string">
+            <column name="DIRECT_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="1024" not-null="true">
+            </column>
+        </property>
+        <property name="modifyDate" type="int">
+            <column name="MODIFY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="modifyTime" type="int">
+            <column name="MODIFY_TIME" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="modifyOperator" type="string">
+            <column name="MODIFY_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="modifyReason" type="string">
+            <column name="MODIFY_REASON" length="256" not-null="true" />
+        </property>
+        <property name="checkDate" type="int">
+            <column name="CHECK_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="checkTime" type="int">
+            <column name="CHECK_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="checkOperator" type="string">
+            <column name="CHECK_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="checkRefuseReason" type="string">
+            <column name="CHECK_REFUSE_REASON" length="256" not-null="true" />
+        </property>
+        <property name="cancelDate" type="int">
+            <column name="CANCEL_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="cancelTime" type="int">
+            <column name="CANCEL_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="cancelOperator" type="string">
+            <column name="CANCEL_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="cancelReason" type="string">
+            <column name="CANCEL_REASON" length="256" not-null="true" />
+        </property>
+        <property name="cancelCheckDate" type="int">
+            <column name="CANCEL_CHECK_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="cancelCheckTime" type="int">
+            <column name="CANCEL_CHECK_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="cancelCheckOperator" type="string">
+            <column name="CANCEL_CHECK_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="cancelCheckRefuseReason" type="string">
+            <column name="CANCEL_CHECK_REFUSE_REASON" length="256" not-null="true" />
+        </property>
+        <property name="executeOperator" type="string">
+            <column name="EXECUTE_OPERATOR" length="32" not-null="true">
+            </column>
+        </property>
+        <property name="instructionStatus" type="string">
+            <column name="INSTRUCTION_STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="checkStatus" type="string">
+            <column name="CHECK_STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="approveStatus" type="string">
+            <column name="APPROVE_STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="cancelCheckStatus" type="string">
+            <column name="CANCEL_CHECK_STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="entrustExecuteStatus" type="string">
+            <column name="ENTRUST_EXECUTE_STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="dealExecuteStatus" type="string">
+            <column name="DEAL_EXECUTE_STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true">
+            </column>
+        </property>
+        <property name="transTime" type="int">
+            <column name="TRANS_TIME" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="approveNoStatus" type="string">
+            <column name="APPROVE_NO_STATUS" length="1" not-null="true">
+                <comment>????K_SPDZT</comment>
+            </column>
+        </property>
+        <property name="approveNo" type="string">
+            <column name="APPROVE_NO" length="32" not-null="true">
+            </column>
+        </property>
+        <property name="virtualInstr" type="string">
+            <column name="VIRTUAL_INSTR" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="instructionRelatedNo" type="string">
+            <column name="INSTRUCTION_RELATED_NO" length="32" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="strategy" type="string">
+            <column name="STRATEGY" length="32" not-null="true">
+            </column>
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="64" not-null="true">
+            </column>
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

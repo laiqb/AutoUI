@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstrstockfile" table="TBINSTRSTOCKFILE">
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="attachType" type="string">
+            <column name="ATTACH_TYPE" length="1" not-null="true">
+                <comment>????????????? ?????1??busin_no????? ?????2??busin_no?????? ?????3??busin_no???????bankrealdeal? ?????4??busin_no??????(cmbankrealdeal)</comment>
+            </column>
+        </property>
+        <property name="businNo" type="string">
+            <column name="BUSIN_NO" length="32" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="versionNo" type="big_decimal">
+            <column name="VERSION_NO" precision="22" scale="0" not-null="true">
+                <comment>0?????????????</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="32" not-null="true" />
+        </property>
+        <property name="attachmentFilename" type="string">
+            <column name="ATTACHMENT_FILENAME" length="100" not-null="true" />
+        </property>
+        <property name="serverFilename" type="string">
+            <column name="SERVER_FILENAME" length="512" not-null="true" />
+        </property>
+        <property name="erecordNo" type="string">
+            <column name="ERECORD_NO" length="32" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

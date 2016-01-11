@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstrate" table="TBINSTRATE">
+        <comment>??????????????????????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinstrateId">
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="ruleNormalNo" type="big_decimal">
+            <column name="RULE_NORMAL_NO" precision="22" scale="0" not-null="true">
+                <comment>0??????????????????</comment>
+            </column>
+        </property>
+        <property name="ruleOverdueNo" type="big_decimal">
+            <column name="RULE_OVERDUE_NO" precision="22" scale="0" not-null="true">
+                <comment>0???</comment>
+            </column>
+        </property>
+        <property name="ruleTermNo" type="big_decimal">
+            <column name="RULE_TERM_NO" precision="22" scale="0" not-null="true">
+                <comment>0???</comment>
+            </column>
+        </property>
+        <property name="ruleTermRemainNo" type="big_decimal">
+            <column name="RULE_TERM_REMAIN_NO" precision="22" scale="0" not-null="true">
+                <comment>0?????????0</comment>
+            </column>
+        </property>
+        <property name="ruleCompoundNo" type="big_decimal">
+            <column name="RULE_COMPOUND_NO" precision="22" scale="0" not-null="true">
+                <comment>0?????????0</comment>
+            </column>
+        </property>
+        <property name="interestCcy" type="string">
+            <column name="INTEREST_CCY" length="3" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="interestMode" type="string">
+            <column name="INTEREST_MODE" length="1" not-null="true">
+                <comment>1-??? 2-?? T-?? 4-???</comment>
+            </column>
+        </property>
+        <property name="payFreq" type="string">
+            <column name="PAY_FREQ" length="3" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="resetFreq" type="string">
+            <column name="RESET_FREQ" length="3" not-null="true">
+                <comment>???????????????????????????????????????? ???????????</comment>
+            </column>
+        </property>
+        <property name="isAdjust" type="string">
+            <column name="IS_ADJUST" length="1" not-null="true">
+                <comment>??????????????????????0????? 0????? 1???</comment>
+            </column>
+        </property>
+        <property name="holiday" type="string">
+            <column name="HOLIDAY" length="30" not-null="true">
+                <comment>??????????? ??GBPJPY,??10??3???????????</comment>
+            </column>
+        </property>
+        <property name="dateAdjustMethod" type="string">
+            <column name="DATE_ADJUST_METHOD" length="1" not-null="true">
+                <comment>0???? 1?????? 2???????????????????????????? 3?????? 4?????????</comment>
+            </column>
+        </property>
+        <property name="paymentOffset" type="big_decimal">
+            <column name="PAYMENT_OFFSET" precision="22" scale="0" not-null="true">
+                <comment>????????????0??0??????</comment>
+            </column>
+        </property>
+        <property name="isMonthEnd" type="string">
+            <column name="IS_MONTH_END" length="1" not-null="true">
+                <comment>????????????0?????? 0????? 1???</comment>
+            </column>
+        </property>
+        <property name="upfrontOrArrears" type="string">
+            <column name="UPFRONT_OR_ARREARS" length="1" not-null="true">
+                <comment>??????????1???? 0??? 1???</comment>
+            </column>
+        </property>
+        <property name="firstPaydate" type="big_decimal">
+            <column name="FIRST_PAYDATE" precision="22" scale="0" not-null="true">
+                <comment>0??????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="lastPayDate" type="big_decimal">
+            <column name="LAST_PAY_DATE" precision="22" scale="0" not-null="true">
+                <comment>0???????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="compdMethod" type="string">
+            <column name="COMPD_METHOD" length="1" not-null="true">
+                <comment>K_FLFS??????0 0-????? 1???</comment>
+            </column>
+        </property>
+        <property name="isResetCombine" type="string">
+            <column name="IS_RESET_COMBINE" length="1" not-null="true">
+                <comment>??????????1???? 0???? 1-??</comment>
+            </column>
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true">
+                <comment>??????????????????? ???????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="aheadAsNormal" type="big_decimal">
+            <column name="AHEAD_AS_NORMAL" precision="22" scale="0" not-null="true">
+                <comment>?????0??????1</comment>
+            </column>
+        </property>
+        <property name="isInterestBal" type="string">
+            <column name="IS_INTEREST_BAL" length="1" not-null="true">
+                <comment>??????????????????? 0????????? 1-??</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

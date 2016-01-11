@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loginHttpVO>
+	<loginName>admin</loginName>
+	<opCode>bizSignIn2</opCode>
+	<password>XXXXX</password>
+	<resCode>bizSign</resCode>
+</loginHttpVO>

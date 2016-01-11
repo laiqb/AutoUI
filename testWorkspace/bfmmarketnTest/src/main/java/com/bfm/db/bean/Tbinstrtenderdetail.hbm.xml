@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstrtenderdetail" table="TBINSTRTENDERDETAIL">
+        <composite-id name="id" class="com.bfm.db.bean.TbinstrtenderdetailId">
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="big_decimal">
+                <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="bidNo" type="string">
+                <column name="BID_NO" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="bidLower" type="big_decimal">
+            <column name="BID_LOWER" precision="20" scale="12" not-null="true">
+                <comment>????????????????????%???????????%??? ?????????2.34%?????????????2.34?</comment>
+            </column>
+        </property>
+        <property name="bidUpper" type="big_decimal">
+            <column name="BID_UPPER" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="bidAmount" type="big_decimal">
+            <column name="BID_AMOUNT" precision="16" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstitutioncredit" table="TBINSTITUTIONCREDIT">
+        <comment>Add by fj from 20091208 for pub 1??????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinstitutioncreditId">
+            <key-property name="pubDate" type="big_decimal">
+                <column name="PUB_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="institutionNo" type="string">
+                <column name="INSTITUTION_NO" length="8" />
+            </key-property>
+            <key-property name="rateInstitutionNo" type="string">
+                <column name="RATE_INSTITUTION_NO" length="8" />
+            </key-property>
+            <key-property name="creditType" type="string">
+                <column name="CREDIT_TYPE" length="4" />
+            </key-property>
+        </composite-id>
+        <property name="institutionName" type="string">
+            <column name="INSTITUTION_NAME" length="256" not-null="true" />
+        </property>
+        <property name="rateInstitutionName" type="string">
+            <column name="RATE_INSTITUTION_NAME" length="256" not-null="true" />
+        </property>
+        <property name="branchType" type="string">
+            <column name="BRANCH_TYPE" length="4" not-null="true">
+                <comment>?????K_JGDSRSX 1? ??? 2? ??? 3? ?? ?????????</comment>
+            </column>
+        </property>
+        <property name="creditRate" type="string">
+            <column name="CREDIT_RATE" length="16" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="creditExpec" type="string">
+            <column name="CREDIT_EXPEC" length="4" not-null="true">
+                <comment>?????K_PJZW 1??? 2 ??? 3 ??? 4 ???????(????) 5 ???????(????) 6 ???????(????)</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

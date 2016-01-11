@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinoutflow" table="TBINOUTFLOW">
+        <comment>?????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinoutflowId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="hostSerial" type="string">
+                <column name="HOST_SERIAL" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="32" not-null="true" />
+        </property>
+        <property name="fundDirection" type="string">
+            <column name="FUND_DIRECTION" length="1" not-null="true">
+                <comment>1?? 2??</comment>
+            </column>
+        </property>
+        <property name="interestFlag" type="string">
+            <column name="INTEREST_FLAG" length="1" not-null="true">
+                <comment>0???? 1????</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="amt" type="big_decimal">
+            <column name="AMT" precision="18" not-null="true" />
+        </property>
+        <property name="operator" type="string">
+            <column name="OPERATOR" length="32" not-null="true">
+                <comment>???111????17??????</comment>
+            </column>
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="64" not-null="true">
+                <comment>???111????17??????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

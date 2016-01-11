@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstrassetcredit" table="TBINSTRASSETCREDIT">
+        <comment>????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinstrassetcreditId">
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="financeType" type="string">
+                <column name="FINANCE_TYPE" length="1" />
+            </key-property>
+            <key-property name="creditCode" type="string">
+                <column name="CREDIT_CODE" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

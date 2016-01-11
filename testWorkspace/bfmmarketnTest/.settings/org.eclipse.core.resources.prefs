@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/bfm/dict/Dict.java=GBK
+encoding//src/main/java/com/bfm/util/HibernateUtil.java=GBK
+encoding//src/main/java/com/bfm/util/Result.java=GBK
+encoding//src/main/java/com/bfm/util/SendRequest.java=GBK
+encoding//src/main/resources/log4j.properties=UTF-8
+encoding//src/test/java/com/bfm/test/login/TC_Login_Failed.java=GBK
+encoding//src/test/java/com/bfm/test/login/TC_Login_First_Success.java=UTF-8
+encoding//src/test/java/com/bfm/test/login/TC_Login_Second_Success.java=GBK
+encoding/<project>=UTF-8

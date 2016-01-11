@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstext" table="TBINSTEXT">
+        <comment>???????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinstextId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="businType" type="string">
+            <column name="BUSIN_TYPE" length="6" not-null="true" />
+        </property>
+        <property name="subCode" type="string">
+            <column name="SUB_CODE" length="4" not-null="true" />
+        </property>
+        <property name="toolNo" type="string">
+            <column name="TOOL_NO" length="32" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true">
+                <comment>?K_WTFX(?????????)</comment>
+            </column>
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="32" not-null="true" />
+        </property>
+        <property name="strategy" type="string">
+            <column name="STRATEGY" length="32" not-null="true">
+                <comment>???????</comment>
+            </column>
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true">
+                <comment>????K_TZLX 1???? 2????? 3????? 4???????? ????????????????????????</comment>
+            </column>
+        </property>
+        <property name="dailyInstructionNo" type="string">
+            <column name="DAILY_INSTRUCTION_NO" length="32" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="indexDailyModify" type="big_decimal">
+            <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" not-null="true">
+                <comment>?????????????1???????????????????</comment>
+            </column>
+        </property>
+        <property name="assoSerial" type="string">
+            <column name="ASSO_SERIAL" length="32" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="sourceFlag" type="string">
+            <column name="SOURCE_FLAG" length="4" not-null="true">
+                <comment>1??????? 2?Deaing 3000 3??? 4????? 11????? 12??????? 13???</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="18" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="remainPrincipal" type="big_decimal">
+            <column name="REMAIN_PRINCIPAL" precision="18" not-null="true">
+                <comment>??????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="dealingPrincipal" type="big_decimal">
+            <column name="DEALING_PRINCIPAL" precision="18" not-null="true">
+                <comment>??????????????????</comment>
+            </column>
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="openBranch" type="string">
+            <column name="OPEN_BRANCH" length="32" not-null="true" />
+        </property>
+        <property name="bookBranch" type="string">
+            <column name="BOOK_BRANCH" length="32" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="attributeBranch" type="string">
+            <column name="ATTRIBUTE_BRANCH" length="32" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true">
+                <comment>?????T+1???????????????</comment>
+            </column>
+        </property>
+        <property name="valueDate" type="big_decimal">
+            <column name="VALUE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="maturityDateAdj" type="big_decimal">
+            <column name="MATURITY_DATE_ADJ" precision="22" scale="0" not-null="true">
+                <comment>???????????????????????</comment>
+            </column>
+        </property>
+        <property name="maturityDate" type="big_decimal">
+            <column name="MATURITY_DATE" precision="22" scale="0" not-null="true">
+                <comment>????????????????????????????0</comment>
+            </column>
+        </property>
+        <property name="dateAdjustMethod" type="string">
+            <column name="DATE_ADJUST_METHOD" length="1" not-null="true">
+                <comment>??????????????????????????????????? 0??????? 1????????????????????1? 2???????????????????????????? 3?????? 4?????????</comment>
+            </column>
+        </property>
+        <property name="holiday" type="string">
+            <column name="HOLIDAY" length="30" not-null="true">
+                <comment>??????????????????????? ??GBP,JPY,??10??3?????????????????</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>K_JYZT 0-???? a-???? 1-?? 2-?? 3-?? 5-?????? 6-???????????????????????????????? 7-?????? 9-???? x-??????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="dealingStatus" type="string">
+            <column name="DEALING_STATUS" length="1" not-null="true">
+                <comment>K_JYCLZT 0??? 1???????? 2?????? 3?????? 4?????? 5?????? 6??????? ???????????????????????????</comment>
+            </column>
+        </property>
+        <property name="oriDealSerialNo" type="string">
+            <column name="ORI_DEAL_SERIAL_NO" length="32" not-null="true">
+                <comment>????????????</comment>
+            </column>
+        </property>
+        <property name="cflFinishStatus" type="string">
+            <column name="CFL_FINISH_STATUS" length="1" not-null="true">
+                <comment>K_YORN 1-???????????(??????????) ??-?????</comment>
+            </column>
+        </property>
+        <property name="aheadAsNormal" type="big_decimal">
+            <column name="AHEAD_AS_NORMAL" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="accountType" type="string">
+            <column name="ACCOUNT_TYPE" length="1" not-null="true">
+                <comment>1???? 2???? 3????4???????????????????????</comment>
+            </column>
+        </property>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="32" not-null="true" />
+        </property>
+        <property name="isInterestBal" type="string">
+            <column name="IS_INTEREST_BAL" length="1" not-null="true">
+                <comment>??????????????????? 0???? 1-??</comment>
+            </column>
+        </property>
+        <property name="lastCflDate" type="big_decimal">
+            <column name="LAST_CFL_DATE" precision="22" scale="0" not-null="true">
+                <comment>0?????????????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="businFlag" type="string">
+            <column name="BUSIN_FLAG" length="1" not-null="true">
+                <comment>1???? 2???? 3??? 4????</comment>
+            </column>
+        </property>
+        <property name="businFlag2" type="string">
+            <column name="BUSIN_FLAG2" length="1" not-null="true">
+                <comment>?????????1??????????(1.62) 0 ????????(0.72)</comment>
+            </column>
+        </property>
+        <property name="reason" type="string">
+            <column name="REASON" length="256" not-null="true" />
+        </property>
+        <property name="realDealSource" type="string">
+            <column name="REAL_DEAL_SOURCE" length="32" not-null="true">
+                <comment>?????? 1?????tbrealdeal 2?????tbmmrealdeal 3?????tbcmrealdeal 4?????tbcashrealdeal 5?????tbassetrealdeal 6?????tbbillbatch</comment>
+            </column>
+        </property>
+        <property name="dealTableSource" type="string">
+            <column name="DEAL_TABLE_SOURCE" length="32" not-null="true">
+                <comment>?????? 1?????tbbankrealdeal(??????????) 2?????tbmmtrade(?????) 3?????tbcmbankrealdeal??????????? 4?????tbbiddeal?????????</comment>
+            </column>
+        </property>
+        <property name="dealAssoSerial" type="string">
+            <column name="DEAL_ASSO_SERIAL" length="32" not-null="true">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="1024" not-null="true">
+                <comment>?????????????????????????</comment>
+            </column>
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true">
+                <comment>???????????????</comment>
+            </column>
+        </property>
+        <property name="checkOperator" type="string">
+            <column name="CHECK_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="approveStatus" type="string">
+            <column name="APPROVE_STATUS" length="1" not-null="true">
+                <comment>1???? 2????? 3????? 4????? 5???? 0??????? ????K_ZLSPZT? ???????????????????????????? ???????????????? ???????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="storeStatus" type="string">
+            <column name="STORE_STATUS" length="1" not-null="true">
+                <comment>1??????(?????????1) 0?????(???????)</comment>
+            </column>
+        </property>
+        <property name="oriBusinClass" type="string">
+            <column name="ORI_BUSIN_CLASS" length="6" not-null="true">
+                <comment>??????????????????????????????10??????????????????</comment>
+            </column>
+        </property>
+        <property name="transReserve1" type="string">
+            <column name="TRANS_RESERVE1" length="64" not-null="true" />
+        </property>
+        <property name="transReserve2" type="string">
+            <column name="TRANS_RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="tradeType" type="string">
+            <column name="TRADE_TYPE" length="1" not-null="true">
+                <comment>0??-??? 9???? 1??? 2???</comment>
+            </column>
+        </property>
+        <property name="closeFlag" type="string">
+            <column name="CLOSE_FLAG" length="1" not-null="true">
+                <comment>0??-???????? 9???? 1?????? 2?????</comment>
+            </column>
+        </property>
+        <property name="inputSystemDate" type="big_decimal">
+            <column name="INPUT_SYSTEM_DATE" precision="22" scale="0" not-null="true">
+                <comment>????????????????????????????????????????????? ????????????????????????</comment>
+            </column>
+        </property>
+        <property name="inputSystemTime" type="big_decimal">
+            <column name="INPUT_SYSTEM_TIME" precision="22" scale="0" not-null="true">
+                <comment>????????????????????????????????????????????? ????????????????????????</comment>
+            </column>
+        </property>
+        <property name="inputOperator" type="string">
+            <column name="INPUT_OPERATOR" length="32" not-null="true">
+                <comment>????????????</comment>
+            </column>
+        </property>
+        <property name="batchNo" type="string">
+            <column name="BATCH_NO" length="32" not-null="true">
+                <comment>???????????????????</comment>
+            </column>
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="TBINDEXDATA" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINOUTFLOW" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTCFL" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTCLOSE" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTCONDBAL" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTCONDBALLIMIT" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTEXT" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTFEELIST" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTITUTIONCREDIT" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTPAYDATELIST" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRASSETCREDIT" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRATE" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRATELEVEL" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRATEVAR" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRDEAL" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRFEEVAR" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRSTOCKFILE" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRTENDERBASIC" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRTENDERDETAIL" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRTENDERUNDUEBOND" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRUCTION" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRUCTIONFLOW" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRUCTIONHGMORTAGAGE" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRUCTIONSTOCK" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINSTRUCTIONSTOCKFX" match-schema="TZYHSC"></table-filter>
+	<table-filter match-name="TBINVESTINDEXDATA" match-schema="TZYHSC"></table-filter>
+</hibernate-reverse-engineering>

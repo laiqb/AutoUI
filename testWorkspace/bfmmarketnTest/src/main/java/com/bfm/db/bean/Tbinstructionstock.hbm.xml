@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstructionstock" table="TBINSTRUCTIONSTOCK">
+        <composite-id name="id" class="com.bfm.db.bean.TbinstructionstockId">
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="int">
+                <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="transDate" type="int">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="instrDailyModify" type="int">
+            <column name="INSTR_DAILY_MODIFY" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="beginDate" type="int">
+            <column name="BEGIN_DATE" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="endDate" type="int">
+            <column name="END_DATE" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true">
+            </column>
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="20" scale="12" not-null="true">
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true">
+            </column>
+        </property>
+        <property name="settleSpeed" type="int">
+            <column name="SETTLE_SPEED" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="hgDays" type="int">
+            <column name="HG_DAYS" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="firstSettleType" type="string">
+            <column name="FIRST_SETTLE_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="secondSettleType" type="string">
+            <column name="SECOND_SETTLE_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="firstSettleDate" type="int">
+            <column name="FIRST_SETTLE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="secondSettleDate" type="int">
+            <column name="SECOND_SETTLE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="firstPrice" type="big_decimal">
+            <column name="FIRST_PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="profitRatio" type="big_decimal">
+            <column name="PROFIT_RATIO" precision="16" scale="8" not-null="true">
+            </column>
+        </property>
+        <property name="firstInterest" type="big_decimal">
+            <column name="FIRST_INTEREST" precision="18" scale="12" not-null="true">
+            </column>
+        </property>
+        <property name="firstSettleBalance" type="big_decimal">
+            <column name="FIRST_SETTLE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="secondPrice" type="big_decimal">
+            <column name="SECOND_PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="secondYield" type="big_decimal">
+            <column name="SECOND_YIELD" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="secondInterest" type="big_decimal">
+            <column name="SECOND_INTEREST" precision="18" scale="12" not-null="true">
+            </column>
+        </property>
+        <property name="secondSettleBalance" type="big_decimal">
+            <column name="SECOND_SETTLE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="interest" type="big_decimal">
+            <column name="INTEREST" precision="18" scale="12" not-null="true">
+            </column>
+        </property>
+        <property name="todayEntrustAmount" type="big_decimal">
+            <column name="TODAY_ENTRUST_AMOUNT" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="todayEntrustBalance" type="big_decimal">
+            <column name="TODAY_ENTRUST_BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="todayDealAmount" type="big_decimal">
+            <column name="TODAY_DEAL_AMOUNT" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="todayDealBalance" type="big_decimal">
+            <column name="TODAY_DEAL_BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="totalDealAmount" type="big_decimal">
+            <column name="TOTAL_DEAL_AMOUNT" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="totalDealBalance" type="big_decimal">
+            <column name="TOTAL_DEAL_BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="totalEntrustAmount" type="big_decimal">
+            <column name="TOTAL_ENTRUST_AMOUNT" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="totalEntrustBalance" type="big_decimal">
+            <column name="TOTAL_ENTRUST_BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="entrustExecuteStatus" type="string">
+            <column name="ENTRUST_EXECUTE_STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="dealExecuteStatus" type="string">
+            <column name="DEAL_EXECUTE_STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="cashControlType" type="string">
+            <column name="CASH_CONTROL_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="stockControlType" type="string">
+            <column name="STOCK_CONTROL_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="fee" type="big_decimal">
+            <column name="FEE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="payFeeDate" type="int">
+            <column name="PAY_FEE_DATE" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="payDate" type="int">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="originalDirection" type="string">
+            <column name="ORIGINAL_DIRECTION" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="factPrice" type="big_decimal">
+            <column name="FACT_PRICE" precision="20" scale="12" not-null="true">
+            </column>
+        </property>
+        <property name="feeRate" type="big_decimal">
+            <column name="FEE_RATE" precision="10" scale="8" not-null="true">
+                <comment>znx</comment>
+            </column>
+        </property>
+        <property name="bailRate" type="big_decimal">
+            <column name="BAIL_RATE" precision="10" scale="8" not-null="true">
+                <comment>znx</comment>
+            </column>
+        </property>
+        <property name="cashFeeRate" type="big_decimal">
+            <column name="CASH_FEE_RATE" precision="10" scale="8" not-null="true">
+                <comment>znx</comment>
+            </column>
+        </property>
+        <property name="limitUnit" type="string">
+            <column name="LIMIT_UNIT" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="limit" type="int">
+            <column name="LIMIT" precision="22" scale="0" not-null="true">
+            </column>
+        </property>
+        <property name="upperRate" type="big_decimal">
+            <column name="UPPER_RATE" precision="10" scale="8" not-null="true">
+            </column>
+        </property>
+        <property name="lowerRate" type="big_decimal">
+            <column name="LOWER_RATE" precision="10" scale="8" not-null="true">
+            </column>
+        </property>
+        <property name="bailOfferSide" type="string">
+            <column name="BAIL_OFFER_SIDE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="bailBalance" type="big_decimal">
+            <column name="BAIL_BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="otherBailBalance" type="big_decimal">
+            <column name="OTHER_BAIL_BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="priceType" type="string">
+            <column name="PRICE_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="matureBalance" type="big_decimal">
+            <column name="MATURE_BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="priceDifBalance" type="big_decimal">
+            <column name="PRICE_DIF_BALANCE" precision="16" not-null="true">
+            </column>
+        </property>
+        <property name="tradeType" type="string">
+            <column name="TRADE_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="priceLimitType" type="string">
+            <column name="PRICE_LIMIT_TYPE" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="dealSplit" type="string">
+            <column name="DEAL_SPLIT" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="maturity" type="big_decimal">
+            <column name="MATURITY" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="maturityAdjust" type="big_decimal">
+            <column name="MATURITY_ADJUST" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="convexity" type="big_decimal">
+            <column name="CONVEXITY" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="holdAmount" type="big_decimal">
+            <column name="HOLD_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="t0EnableAmount" type="big_decimal">
+            <column name="T0_ENABLE_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="t1EnableAmount" type="big_decimal">
+            <column name="T1_ENABLE_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="seatNo" type="string">
+            <column name="SEAT_NO" length="6" not-null="true" />
+        </property>
+        <property name="stockholderId" type="string">
+            <column name="STOCKHOLDER_ID" length="10" not-null="true" />
+        </property>
+        <property name="virtualInstr" type="string">
+            <column name="VIRTUAL_INSTR" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true">
+            </column>
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true">
+            </column>
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="256" not-null="true" />
+        </property>
+        <property name="reserve4" type="string">
+            <column name="RESERVE4" length="256" not-null="true">
+            </column>
+        </property>
+        <property name="reserve5" type="string">
+            <column name="RESERVE5" length="256" not-null="true" />
+        </property>
+        <property name="profitDirection" type="string">
+            <column name="PROFIT_DIRECTION" length="1" not-null="true">
+            </column>
+        </property>
+        <property name="profitAmount" type="big_decimal">
+            <column name="PROFIT_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="tradeFare" type="big_decimal">
+            <column name="TRADE_FARE" precision="16" not-null="true" />
+        </property>
+        <property name="settleFare" type="big_decimal">
+            <column name="SETTLE_FARE" precision="16" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true">
+            </column>
+        </property>
+        <property name="strategy" type="string">
+            <column name="STRATEGY" length="32" not-null="true">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

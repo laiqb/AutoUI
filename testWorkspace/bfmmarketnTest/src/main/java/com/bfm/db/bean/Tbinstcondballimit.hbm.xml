@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstcondballimit" table="TBINSTCONDBALLIMIT">
+        <composite-id name="id" class="com.bfm.db.bean.TbinstcondballimitId">
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ruleNo" type="big_decimal">
+                <column name="RULE_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="levelNo" type="big_decimal">
+                <column name="LEVEL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="levelLimitNo" type="big_decimal">
+                <column name="LEVEL_LIMIT_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="startLimit" type="big_decimal">
+            <column name="START_LIMIT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endLimit" type="big_decimal">
+            <column name="END_LIMIT" precision="22" scale="0" not-null="true">
+                <comment>0?????</comment>
+            </column>
+        </property>
+        <property name="payRate" type="big_decimal">
+            <column name="PAY_RATE" precision="10" scale="8" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

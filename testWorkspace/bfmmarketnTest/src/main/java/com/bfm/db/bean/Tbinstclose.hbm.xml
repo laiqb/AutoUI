@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstclose" table="TBINSTCLOSE">
+        <comment>???????????? ???1??100?????2?30??3?70??????????????</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="closeSerialNo" type="string">
+            <column name="CLOSE_SERIAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="openSerialNo" type="string">
+            <column name="OPEN_SERIAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="dealAmount" type="big_decimal">
+            <column name="DEAL_AMOUNT" precision="18" not-null="true">
+                <comment>?????????????</comment>
+            </column>
+        </property>
+        <property name="methodFlag" type="string">
+            <column name="METHOD_FLAG" length="2" not-null="true">
+                <comment>1????? 2?FIFO ??????????????????????</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="2" not-null="true">
+                <comment>1??? 2???</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

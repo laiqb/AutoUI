@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.password">bfmcpv</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.53.96:1521:orcl</property>
+        <property name="hibernate.connection.username">bfmcpv</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <mapping resource="com/bfm/db/bean/TsysUser.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstext.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstclose.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstructionflow.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstrassetcredit.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstrtenderbasic.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstrate.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstratevar.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstrstockfile.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinoutflow.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinvestindexdata.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstratelevel.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstitutioncredit.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstructionhgmortagage.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstcondbal.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstcondballimit.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstrfeevar.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstfeelist.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstruction.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbindexdata.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstcfl.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstpaydatelist.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstrtenderunduebond.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstrdeal.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstrtenderdetail.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstructionstock.hbm.xml" />
+        <mapping resource="com/bfm/db/bean/Tbinstructionstockfx.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

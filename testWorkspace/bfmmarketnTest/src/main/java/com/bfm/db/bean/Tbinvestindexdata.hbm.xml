@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinvestindexdata" table="TBINVESTINDEXDATA">
+        <comment>&#185;&#169; &#204;&#168;&#214;&#221;&#184;&#246;&#208;&#212;&#187;&#175;&#177;&#168; -
+        &#205;&#182;&#215;&#202;&#202;&#213;&#210;&#230;&#189;&#248;&#182;&#200;&#177;&#237; &#202;&#185;&#211;&#195;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinvestindexdataId">
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="indexId" type="string">
+                <column name="INDEX_ID" length="32" />
+            </key-property>
+            <key-property name="dateType" type="string">
+                <column name="DATE_TYPE" length="32" />
+            </key-property>
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="value" type="big_decimal">
+                <column name="VALUE" precision="18" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="64" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

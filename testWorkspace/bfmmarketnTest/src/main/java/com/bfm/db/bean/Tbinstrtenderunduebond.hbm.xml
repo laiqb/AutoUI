@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-8 13:28:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbinstrtenderunduebond" table="TBINSTRTENDERUNDUEBOND">
+        <comment>?????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbinstrtenderunduebondId">
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="big_decimal">
+                <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="bidAmount" type="big_decimal">
+            <column name="BID_AMOUNT" precision="16" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
