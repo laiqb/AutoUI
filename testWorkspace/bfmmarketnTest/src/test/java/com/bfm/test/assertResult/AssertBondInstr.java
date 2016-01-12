@@ -11,6 +11,7 @@ import com.bfm.http.bean.BondInstrHttpVO;
 public class AssertBondInstr {
 	public static boolean assertBondInstr(Object obj,String no){
 		BondInstrHttpVO inst = (BondInstrHttpVO)obj;
+		System.out.println();
 		boolean rs = false;
 		if(assertTbinstruction(inst,no)&&assertTbinstructionStock(inst,no))
 			rs = true;
